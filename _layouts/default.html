@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+
+    <div class="containter">
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <section class="row">
+        <div class='col s12'>
+          {% include contact.html %}
+        </div>
+
+        <div class='col s12'>
+          {% include subscribe.html %}
+        </div>
+      </section>
+    </div>
+    <hr>
+    {% include footer.html %}
+  </body>
+</html>
