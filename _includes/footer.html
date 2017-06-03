@@ -1,12 +1,22 @@
-{% if site.theme_settings.katex %}
-<script src="{{ "/js/katex_init.js" | prepend: site.baseurl }}"></script>
-{% endif %}
-
 {% if site.theme_settings.footer_text %}
-<footer class="site-footer">
-	<!-- Social icons from Font Awesome, if enabled -->
-	<ul class="icons">{% include icons.html %}</ul>
-	<p class="text">{{ site.theme_settings.footer_text }}</p>
-	<p class="text"></p>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12 white-text">
+        <h5>Footer</h5>
+        "The gum you like is going to come back in style."
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+				<ul class="icons">{% include icons.html %}</ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2017 Copyright Text
+    <a class="grey-text text-lighten-4 right">"Change your anchor to what did not happen rather than what did happen"</a>
+    </div>
+  </div>
 </footer>
 {% endif %}
