@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sample Post
+title: Another Sample Post
 ---
 
-This is a sample post. 
+"Marxian exploitation is the exploitation of people's lack of understanding of economics." Nozick
