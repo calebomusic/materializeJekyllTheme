@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "http://example.com" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -12,6 +12,8 @@ theme_settings:
 
   # Header and footer text
   header_text:
+   <p>Welcome your new thought leader:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
 
   header_text_feature_image:
   footer_text:
@@ -47,8 +49,8 @@ theme_settings:
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
   str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
+  str_next: ""
+  str_prev: ""
   str_continue_reading: "Continue reading"
 
   # Colours, typography and padding
@@ -59,7 +61,7 @@ theme_settings:
   post_navigation: false
 
 # PAGINATION
-paginate: 5
+paginate: 3
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
