@@ -14,9 +14,9 @@ layout: default
 
 <!-- Post navigation -->
 {% if site.theme_settings.post_navigation %}
-<div class="footer-copyright teal">
+<div class="footer-copyright teal lighten-2 hoverable">
     {% if page.previous.url %}
-    <a href="{{ site.baseurl }}{{ page.previous.url }}">
+    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="">
       <span class="nav-label">
         <i class="fa fa-chevron-left"></i> {{ site.theme_settings.str_prev }}
       </span>
@@ -24,7 +24,7 @@ layout: default
     </a>
     {% endif %}
     {% if page.next.url %}
-    <a class="right" href="{{ site.baseurl }}{{ page.next.url }}">
+    <a class="right" href="{{ site.baseurl }}{{ page.next.url }}" class="">
        <span class="page-title white-text">{{ page.next.title }}</span>
        <span class="nav-label">
         {{ site.theme_settings.str_next }} <i class="fa fa-chevron-right"></i>
