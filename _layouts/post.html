@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article {% if page.feature-img %}class="feature-image"{% endif %}>
+<article {% if page.feature-img %}class="feature-image"{% endif %} class="container">
   <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
     <h1 class="title">{{ page.title }}</h1>
     <p class="meta">
@@ -9,23 +9,23 @@ layout: default
     {% if page.author %} - {{ page.author }}{% endif %}
     </p>
   </header>
-  <section class="post-content">{{ content }}</section>
+  <section class="">{{ content }}</section>
 </article>
 
 <!-- Post navigation -->
 {% if site.theme_settings.post_navigation %}
-<div id="post-nav">
+<div class="footer-copyright teal">
     {% if page.previous.url %}
-    <a id="prev-post" href="{{ site.baseurl }}{{ page.previous.url }}">
-      <span class="page-title">{{ page.previous.title }}</span>
+    <a href="{{ site.baseurl }}{{ page.previous.url }}">
       <span class="nav-label">
         <i class="fa fa-chevron-left"></i> {{ site.theme_settings.str_prev }}
       </span>
+      <span class="page-title white-text">{{ page.previous.title }}</span>
     </a>
     {% endif %}
     {% if page.next.url %}
-    <a id="next-post" href="{{ site.baseurl }}{{ page.next.url }}">
-       <span class="page-title">{{ page.next.title }}</span>
+    <a class="right" href="{{ site.baseurl }}{{ page.next.url }}">
+       <span class="page-title white-text">{{ page.next.title }}</span>
        <span class="nav-label">
         {{ site.theme_settings.str_next }} <i class="fa fa-chevron-right"></i>
        </span>
@@ -36,14 +36,14 @@ layout: default
 
 <!-- Disqus -->
 {% if site.theme_settings.disqus_shortname %}
-<div class="comments">
+<div class="container">
   {% include disqus.html %}
 </div>
 {% endif %}
 
 <!-- Muut -->
 {% if site.theme_settings.muut_community_name %}
-<div class="comments">
+<div class="container">
   {% include muut.html %}
 </div>
 {% endif %}
