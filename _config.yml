@@ -49,14 +49,15 @@ theme_settings:
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
   str_email: "Email"
-  str_next: ""
-  str_prev: ""
+  str_next: "Next"
+  str_prev: "Previous"
   str_continue_reading: "Continue reading"
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
   google_fonts: "Dosis:400,700|Source+Sans+Pro:400,700,700italic,400italic"
-
+  katex: true # Enable if using math markup
+  
   # Post navigation
   post_navigation: true
 
@@ -68,6 +69,6 @@ paginate_path: "blog/page:num"
 markdown: kramdown
 highlighter: rouge
 sass:
-  sass_dir: _sass
+  sass_dir: _sass/components
   style: :compressed
 gems: [jekyll-paginate]
