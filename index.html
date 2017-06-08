@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="home">
   {% if site.theme_settings.header_text %}
   <div class="call-out"
@@ -11,18 +12,22 @@ layout: default
 
   <div class="posts">
     {% for post in paginator.posts %}
-    <div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2" href="{{ post.url | prepend: site.baseurl }}">
+    <div class="post-teaser">
+      <header>
+        <h1>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <p class="meta">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+      </header>
+      <div class="excerpt">
+        {{ post.excerpt }}
+        <a class="button" href="{{ post.url | prepend: site.baseurl }}">
           {{ site.theme_settings.str_continue_reading }}
         </a>
-      </div>
-      <div class="carousel-item green white-text" href="{{ post.url | prepend: site.baseurl }}">
-        <header>
-          <h2>{{ post.title }}</h2>
-          {{ post.date | date: "%B %-d, %Y" }}
-        </header>
-        <p class="white-text">{{ post.excerpt }}</p>
       </div>
     </div>
     {% endfor %}
@@ -30,17 +35,25 @@ layout: default
 
   {% if paginator.total_pages > 1 %}
   <br>
-  <div class="pagination center white-text">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn" >
-      {{ site.theme_settings.str_prev }}
-    </a>
-    {% endif %}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn" >
-      {{ site.theme_settings.str_next }}
-    </a>
-    {% endif %}
-  </div>
+  <footer class="page-footer teal">
+    <div class="pagination center">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+        <i class="material-icons">chevron_left</i>
+        <i class="material-icons">chevron_left</i>
+        <i class="material-icons">chevron_left</i>
+        {{ site.theme_settings.str_prev }}
+      </a>
+      {% endif %}
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+        {{ site.theme_settings.str_next }}
+        <i class="material-icons">chevron_right</i>
+        <i class="material-icons">chevron_right</i>
+        <i class="material-icons">chevron_right</i>
+      </a>
+      {% endif %}
+    </div>
+  </footer>
   {% endif %}
 </div>
