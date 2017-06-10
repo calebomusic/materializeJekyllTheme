@@ -42,8 +42,6 @@ theme_settings:
 
   # Scripts
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  muut_community_name: # From muut.com settings, e.g. "muttcommunityname"
 
   # Localization strings
   str_follow_on: "Follow on"
@@ -57,7 +55,7 @@ theme_settings:
   # Open the "_sass > base" folder, and open "_variables.scss"
   google_fonts: "Dosis:400,700|Source+Sans+Pro:400,700,700italic,400italic"
   katex: true # Enable if using math markup
-  
+
   # Post navigation
   post_navigation: true
 
@@ -68,7 +66,4 @@ paginate_path: "blog/page:num"
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass/components
-  style: :compressed
 gems: [jekyll-paginate]
