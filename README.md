@@ -4,6 +4,8 @@
 
 An open-source lightweight, minimalist, and responsive [Jekyll](http://jekyllrb.com/) blog styled using [Materialize CSS](materializecss.com/getting-started.html).
 
+[Check out the demo!](https://calebomusic.github.io/materializeJekyllTheme/)
+
 Forked from [Type Theme](https://github.com/rohanchandra/type-theme).
 
 ## Installation
