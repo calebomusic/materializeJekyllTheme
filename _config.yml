@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://calebomusic.github.io/materializeJekyllTheme/" # the base hostname & protocol for your site
+baseurl: "/materializeJekyllTheme/" # the subpath of your site, e.g. /blog/
+url: "https://calebomusic.github.io" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
